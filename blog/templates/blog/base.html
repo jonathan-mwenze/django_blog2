@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>blog</title>
+  {% endif %}
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>
