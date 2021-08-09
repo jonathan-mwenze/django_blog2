@@ -29,6 +29,7 @@ class Comment(models.Model):
 
 	post = models.ForeignKey(Post, on_delete=models.CASCADE)
 	author = models.CharField(max_length=50)
+	text = models.TextField(default=False)
 	status = models.CharField(max_length=20, default=STATUS_VISIBLE, choices=STATUS_CHOICES)
 	moderation_text = models.CharField(max_length=200, blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
