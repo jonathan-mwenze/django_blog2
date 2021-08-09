@@ -38,6 +38,23 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+
+	search_fields = ['post__title', 'author',]
+
+	list_display = [
+	  'post',
+	  'author',
+	  'text',
+	  'status',
+	  'moderation_text',
+	  'created_at',
+	  
+	]
+
+	list_filter = [
+	  'post__title',
+	  'author',
+	]
 	pass
 
 
