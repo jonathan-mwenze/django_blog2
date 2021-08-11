@@ -4,6 +4,9 @@ from django.forms import Textarea
 
 from .models import PostCategory, Post, Comment
 
+admin.site.site_header = "IT BLOG"
+admin.site.site_title = "PYTHON & DJANGO ONLY"
+admin.site.index_title = "THE BEST PLACE TO LEARN DJANGO"
 
 @admin.register(PostCategory)
 class PostCategoryAdmin(admin.ModelAdmin):
