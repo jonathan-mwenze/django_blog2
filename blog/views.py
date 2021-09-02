@@ -10,3 +10,4 @@ def index(request, category_name=model_helpers.post_category_all()):
 	   'title':'Home',
 	}
 	return render(request, 'blog/index.html', context)
+return render()
